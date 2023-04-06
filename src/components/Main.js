@@ -6,7 +6,7 @@ import Homepage from "./Homepage";
 
 const Main = () => {
   return (
-    <div>
+    <div className="main">
       <Navbar />
       <main>
         <Routes>
