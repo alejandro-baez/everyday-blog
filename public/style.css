@@ -38,14 +38,37 @@ body {
   width: 100%;
 }
 
+main {
+  flex: 1 0 auto;
+}
+
+.login {
+  height: 100%;
+  /* Need to figure out the height of this */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
 .footer-container {
   margin-top: auto;
+  flex-shrink: 0;
 }
 
 /* .footer-container{
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
 }
 */
 

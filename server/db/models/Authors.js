@@ -16,6 +16,21 @@ const Author = sequelize.define("Author", {
       notEmpty: true,
     },
   },
+  username: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
+  password: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
+
   email: {
     type: DataTypes.STRING,
     allowNull: false,
