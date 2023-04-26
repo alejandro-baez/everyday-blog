@@ -104,3 +104,9 @@ main {
   height: 50px;
   width: 50px;
 }
+
+.nav-list-links a{
+  /* Link is viewed as container */
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}

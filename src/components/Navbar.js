@@ -15,9 +15,11 @@ const Navbar = () => {
       </div>
       <div className="nav-options container-item">
         <ul className="nav-list-links">
-          <li>Home</li>
+          <li><Link to="/" >Home</Link></li>
           <li>Search</li>
-          <li>Log In</li>
+          <li>
+            <Link to="/login">Log In</Link>
+          </li>
           <li>Sign Up</li>
         </ul>
       </div>
