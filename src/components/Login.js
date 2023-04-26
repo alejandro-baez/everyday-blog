@@ -3,6 +3,7 @@ import React from "react";
 const Login = () => {
   return (
     <div className="login">
+      <div className="form-title">Log In</div>
       <form className="create-form">
         <label htmlFor="username">Username:</label>
         <input
