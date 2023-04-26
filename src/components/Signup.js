@@ -3,13 +3,21 @@ import React from "react";
 const Signup = () => {
   return (
     <div className="signup">
-        <div className="form-title">Sign Up</div>
-      <form className="create-form">
+      <div className="form-title">Sign Up</div>
+      <form className="create-form ">
         <label htmlFor="username">Username:</label>
         <input
           type="text"
           name="username"
           placeholder="username"
+          required="required"
+        />
+
+        <label htmlFor="email">Email:</label>
+        <input
+          type="text"
+          name="email"
+          placeholder="email"
           required="required"
         />
 
