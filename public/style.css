@@ -43,11 +43,11 @@ main {
 }
 
 .login {
-  height: 100%;
   /* Need to figure out the height of this */
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .create-form {
@@ -59,9 +59,8 @@ main {
   justify-content: space-evenly;
 }
 
-
 .footer-container {
-  margin-top: auto;
+  /* margin-top: auto; */
   flex-shrink: 0;
 }
 
@@ -99,4 +98,9 @@ main {
   color: white;
   background-color: rgb(144, 145, 143);
   height: 25px;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
 }
