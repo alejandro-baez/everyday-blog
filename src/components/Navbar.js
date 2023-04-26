@@ -15,12 +15,16 @@ const Navbar = () => {
       </div>
       <div className="nav-options container-item">
         <ul className="nav-list-links">
-          <li><Link to="/" >Home</Link></li>
-          <li>Search</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>View Blogs</li>
           <li>
             <Link to="/login">Log In</Link>
           </li>
-          <li>Sign Up</li>
+          <li>
+            <Link to="/signup">Sign Up</Link>
+          </li>
         </ul>
       </div>
     </header>

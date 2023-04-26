@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Homepage from "./Homepage";
 import Login from "./Login";
+import Signup from "./Signup"
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<Signup/>}></Route>
         </Routes>
       </main>
       <Footer />

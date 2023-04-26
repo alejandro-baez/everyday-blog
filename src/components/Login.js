@@ -20,7 +20,7 @@ const Login = () => {
         />
 
         <button className="create-btn" type="submit">
-          Create
+          Log In
         </button>
       </form>
     </div>
