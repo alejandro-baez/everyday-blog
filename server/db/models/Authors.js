@@ -2,20 +2,6 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../database");
 
 const Author = sequelize.define("Author", {
-  firstName: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-    },
-  },
-  lastName: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-    },
-  },
   username: {
     type: DataTypes.STRING,
     allowNull: false,
