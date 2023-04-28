@@ -3,7 +3,7 @@ const app = require("./app");
 const { sequelize } = require("./db");
 
 //adding {force:true} inside of sequelize.sync() drops the tables and recreates them
-sequelize.sync({force:true}).then(() => {
+sequelize.sync().then(() => {
   console.log("db synced");
   app.listen(PORT, () => {
     console.log(`listening on http://localhost:${PORT}`);
