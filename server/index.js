@@ -1,6 +1,7 @@
 const PORT = process.env.PORT || 3000;
 const app = require("./app");
 const { sequelize } = require("./db");
+require("dotenv").config()
 
 //adding {force:true} inside of sequelize.sync() drops the tables and recreates them
 sequelize.sync().then(() => {

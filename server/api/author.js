@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const { where } = require("sequelize");
 const { Author } = require("../db/index");
 
 router.get("/", async (req, res, next) => {

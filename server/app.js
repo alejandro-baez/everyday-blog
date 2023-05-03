@@ -13,6 +13,7 @@ app.use(cors());
 app.use(volleyball);
 
 app.use("/api", require("./api"));
+app.use("/auth", require("./auth"))
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 
