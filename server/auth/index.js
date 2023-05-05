@@ -29,7 +29,7 @@ router.post("/signup", async (req,res,next) =>{
 
 router.get("/me", async (req,res,next)=>{
     try{
-        res.send(await Author.findByToken(req.header.authorization))
+        res.send(await Author.findByToken(req.headers.authorization))
     }catch(err){
         next(err)
     }

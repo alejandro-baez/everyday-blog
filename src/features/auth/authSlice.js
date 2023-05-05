@@ -8,11 +8,13 @@ export const me = createAsyncThunk("auth/me", async () => {
   try {
     if (token) {
       const res = await axios.get("/auth/me", {
-        header: {
+        headers: {
           authorization: token,
         },
       });
       return res.data;
+    }else{
+        return {}
     }
   } catch (err) {
     if (err.response.data) {

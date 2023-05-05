@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signUp } from "../features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,9 +15,7 @@ const Signup = () => {
     evt.preventDefault;
     console.log(username);
     dispatch(signUp({ username, email, password }));
-    setUsername("");
-    setEmail("");
-    setPassword("");
+    navigate("/");
   };
 
   return (
