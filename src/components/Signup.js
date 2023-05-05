@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addAuthor } from "../features/authors/authorsSlice";
+import { signUp } from "../features/auth/authSlice";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -11,8 +11,8 @@ const Signup = () => {
 
   const handleSubmitCreate = async (evt) => {
     evt.preventDefault;
-    console.log(username)
-    dispatch(addAuthor({ username, email, password }));
+    console.log(username);
+    dispatch(signUp({ username, email, password }));
     setUsername("");
     setEmail("");
     setPassword("");

@@ -55,11 +55,11 @@ Author.prototype.generateToken = function () {
 
 //class methods
 
-Author.authenticate = async function ({ username, password, email }) {
-  const user = await Author.findOne({ where: { username, email } });
+Author.authenticate = async function ({ username, password }) {
+  const user = await Author.findOne({ where: { username } });
   if (!user || !(await user.correctPassword(password))) {
     const error = Error("Incorrect username/password");
-    error.status(401);
+    error.status=401;
     throw error;
   }
   return user.generateToken();
@@ -68,7 +68,7 @@ Author.authenticate = async function ({ username, password, email }) {
 Author.findByToken = async function (token) {
   try {
     const { id } = await jwt.verify(token, process.env.JWT);
-    const user = await Author.findByPK(id);
+    const user = await Author.findByPk(id);
     if (!user) {
       throw "nooooo";
     }
@@ -92,5 +92,3 @@ const hashPassword = async (user) => {
 Author.beforeCreate(hashPassword);
 Author.beforeUpdate(hashPassword);
 Author.beforeBulkCreate((users) => Promise.all(users.map(hashPassword)));
-
-
