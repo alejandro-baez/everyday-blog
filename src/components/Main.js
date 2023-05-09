@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Homepage from "./Homepage";
 import Login from "./Login";
 import Signup from "./Signup";
+import CreateBlog from "./CreateBlog";
 import { useDispatch, useSelector } from "react-redux";
 import LoggedIn from "./LoggedIn";
 import { me } from "../store/store";
@@ -27,6 +28,7 @@ const Main = () => {
           <Routes>
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/logged-in" element={<LoggedIn />}></Route>
+            <Route path="/create-blog" element={<CreateBlog />}></Route>
           </Routes>
         ) : (
           <Routes>
