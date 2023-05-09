@@ -118,3 +118,13 @@ main {
 .redirect-link {
   margin-top: 1rem;
 }
+
+#your-profile {
+  width: 100%;
+}
+
+#your-profile .title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}

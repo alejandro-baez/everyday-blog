@@ -8,3 +8,5 @@ export const store = configureStore({
     auth: authSlice,
   },
 });
+
+export * from "../features/auth/authSlice"

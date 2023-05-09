@@ -7,6 +7,7 @@ import { logout } from "../features/auth/authSlice";
 const Navbar = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   const isAdmin = useSelector((state) => !!state.auth.me.isAdmin);
+  const username = useSelector((state) => state.auth.me.username);
 
   console.log(isLoggedIn);
 
@@ -36,10 +37,14 @@ const Navbar = () => {
             </li>
             <li>View Blogs</li>
             <li>
-              <h4>Welcome</h4>
+              <Link to="/logged-in">
+                <h4>Welcome, {username}</h4>
+              </Link>
             </li>
             <li>
-              <button type="button" onClick={logoutandRedirectHome}>Logout</button>
+              <button type="button" onClick={logoutandRedirectHome}>
+                Logout
+              </button>
             </li>
           </ul>
         </div>
